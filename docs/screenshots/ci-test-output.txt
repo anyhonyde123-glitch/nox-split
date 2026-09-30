@@ -1,0 +1,34 @@
+﻿
+> nox-split@0.1.0 test
+> vitest run --reporter=verbose
+
+
+ RUN  v3.2.7 E:/sjtm/anyhonyde123@gmail.com/nox-split
+
+ Γ£ô tests/witnesses.test.ts > NoxSplit claim encoding > encodes LE u64 amount in bytes 0..7 with NoxSplit tag at offset 24 2ms
+ Γ£ô tests/witnesses.test.ts > NoxSplit claim encoding > decodeAmount matches encodeClaim 0ms
+ Γ£ô tests/witnesses.test.ts > NoxSplit claim encoding > round-trips hex helpers 0ms
+ Γ£ô tests/witnesses.test.ts > NoxSplit claim encoding > privateSplitClaim returns the same 32-byte claim 0ms
+ Γ£ô tests/witnesses.test.ts > NoxSplit claim encoding > rejects malformed private claims 1ms
+node.exe : Sourcemap for "E:/sjtm/anyhonyde123@gmail.com/nox-split/contracts/managed/nox-split/contract/index.js" 
+points to missing source files
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Users\acer\AppData\Roaming\n ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Sourcemap for "...ng source files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ Γ£ô tests/nox-split.test.ts > NoxSplit managed artifacts > ships compiler, contract, keys, and zkir directories 1ms
+ Γ£ô tests/nox-split.test.ts > NoxSplit managed artifacts > lists expected circuits and witness in contract-info.json 1ms
+ Γ£ô tests/nox-split.test.ts > NoxSplit managed artifacts > has prover/verifier keys for every circuit 1ms
+ Γ£ô tests/nox-split.test.ts > NoxSplit runtime ledger > starts with lastSplitCommitted=false, count=0, empty commitment 32ms
+ Γ£ô tests/nox-split.test.ts > NoxSplit runtime ledger > amount > 0 sets lastSplitCommitted=true and bumps count 16ms
+ Γ£ô tests/nox-split.test.ts > NoxSplit runtime ledger > amount == 0 still commits with lastSplitCommitted=false 12ms
+ Γ£ô tests/nox-split.test.ts > NoxSplit runtime ledger > increments splitCommitCount across successive commits 17ms
+ Γ£ô tests/nox-split.test.ts > NoxSplit runtime ledger > does not put cleartext amount on the public ledger view 15ms
+
+ Test Files  2 passed (2)
+      Tests  13 passed (13)
+   Start at  22:56:38
+   Duration  588ms (transform 88ms, setup 0ms, collect 157ms, tests 102ms, environment 0ms, prepare 204ms)
+
