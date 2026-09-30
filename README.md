@@ -2,15 +2,14 @@
 
 **Private payroll / splits on Midnight Preprod.**
 
-[![CI](https://github.com/OWNER/nox-split/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/nox-split/actions/workflows/ci.yml)
-
-> Replace `OWNER` in the badge URL with your GitHub org/user after the remote exists.
+[![CI](https://github.com/anyhonyde123-glitch/nox-split/actions/workflows/ci.yml/badge.svg)](https://github.com/anyhonyde123-glitch/nox-split/actions/workflows/ci.yml)
 
 Commit a private payroll split without exposing amounts on the public ledger. Observers only see that a split was committed, how many commits exist, and a commitment hash.
 
 | | |
 |---|---|
-| **Live demo** | _pending Vercel_ |
+| **Live demo** | https://nox-split.vercel.app |
+| **GitHub** | https://github.com/anyhonyde123-glitch/nox-split |
 | **Network** | Midnight **Preprod** |
 | **Wallet** | 1AM (primary) |
 | **Contract** | see [docs/evidence/DEPLOYMENT.md](docs/evidence/DEPLOYMENT.md) |
@@ -38,7 +37,7 @@ Commit a private payroll split without exposing amounts on the public ledger. Ob
 | `commitSplit` from UI with wallet/local proving | ✅ |
 | Private amount never on public ledger tape; cleared after success | ✅ |
 | Deploy + Join on Preprod | ✅ (UI path; record address in DEPLOYMENT.md) |
-| Live Vercel demo | ✅ (after deploy step) |
+| Live Vercel demo | ✅ https://nox-split.vercel.app |
 | Preprod address in README + DEPLOYMENT.md | ✅ (placeholder until funded deploy) |
 | README privacy model | ✅ |
 | ≥8 meaningful commits | ✅ |
