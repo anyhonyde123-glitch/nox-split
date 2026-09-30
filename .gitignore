@@ -11,3 +11,4 @@ coverage/
 .level/
 **/private-state/
 web/public/zk/nox-split/
+.vercel
