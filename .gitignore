@@ -1,0 +1,13 @@
+node_modules/
+web/node_modules/
+dist/
+web/dist/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+coverage/
+.level/
+**/private-state/
+web/public/zk/nox-split/
