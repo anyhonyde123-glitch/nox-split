@@ -1,0 +1,58 @@
+pragma language_version 0.23;
+
+import CompactStandardLibrary;
+
+/**
+ * NoxSplit — private payroll / split commitment on Midnight.
+ *
+ * Encoding (prover-side):
+ * - `privateSplitClaim` is a 32-byte witness payload.
+ * - Bytes 0..7: little-endian u64 amount.
+ * - Bytes 24..31: ASCII tag "NoxSplit" (8 chars).
+ * - Circuit param `amount: Uint<64>` is private (not a public ledger field).
+ *
+ * Public ledger only exposes:
+ * - lastSplitCommitted (bool)
+ * - splitCommitCount (counter)
+ * - latestSplitCommitment (Bytes<32>)
+ *
+ * Recipient labels / per-recipient amounts are NEVER on-chain (L2/L3).
+ */
+
+export ledger lastSplitCommitted: Boolean;
+export ledger splitCommitCount: Counter;
+export ledger latestSplitCommitment: Bytes<32>;
+
+constructor() {
+  lastSplitCommitted = false;
+  latestSplitCommitment = pad(32, "");
+}
+
+/**
+ * Private 32-byte split claim. Never written cleartext to the public ledger.
+ */
+witness privateSplitClaim(): Bytes<32>;
+
+/**
+ * Commit a private payroll/split amount.
+ * Demo rule: amount > 0 ⇒ lastSplitCommitted = true; amount == 0 ⇒ false.
+ * Count and commitment always update so observers see a commit happened.
+ */
+export circuit commitSplit(amount: Uint<64>): [] {
+  const claim = privateSplitClaim();
+  latestSplitCommitment = disclose(persistentHash<Bytes<32>>(claim));
+  lastSplitCommitted = disclose(amount > 0);
+  splitCommitCount.increment(1);
+}
+
+export circuit getSplitCommitCount(): Uint<64> {
+  return splitCommitCount;
+}
+
+export circuit getLastSplitCommitted(): Boolean {
+  return lastSplitCommitted;
+}
+
+export circuit getLatestSplitCommitment(): Bytes<32> {
+  return latestSplitCommitment;
+}
