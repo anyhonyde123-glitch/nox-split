@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "file": "index.js",
+  "sourceRoot": "../../../../",
+  "sources": ["contracts/nox-split.compact", "compiler/standard-library.compact"],
+  "names": [],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAyBA;;;;;;;;;;;;;MAeA,AAAA,WAKC;;;;;cAL0B,QAAgB;;;;;;;;;;;;;;;;;;yCAAhB,QAAgB;;;;;;;wEAAhB,QAAgB;;;OAK1C;MAED,AAAA,mBAEC;;;;;;;;;;;;;;;;;;;;;;OAAA;MAED,AAAA,qBAEC;;;;;;;;;;;;;;;;;;;;;;OAAA;MAED,AAAA,wBAEC;;;;;;;;;;;;;;;;;;;;;;;OAAA;;;;;;;;;;;;;;GA7BA;EAHD;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAJA;;;;;;;;;yEAA0C;IAC1C;;;;;;;;;yEAAwC;IACxC;;;;;;;;;yEAA+C;IAG7C;;;;;;;;;yEAAkB;IAClB;;;;;;;;;yEAAqB;;;;;;;GACtB;EC5BD,AAAA,kBAAA;oEAAA;;;EDiCA,AAAA,oBAAuC;;0DAAvC,iBAAuC;;;;;;;;;;;;;;GAAA;EAOvC,AAAA,cAKC,4BAL0B,QAAgB;UACnC,OAA2B;UACjC,KAAqB,0BAAsC,OAAK;IAAhE;;;;;;;2HAAA,KAAqB;;yEAAA;UACrB,KAAkB,GAAY,QAAM;IAApC;;;;;;;2HAAA,KAAkB;;yEAAA;UAClB,KAAgB;IAAhB;;;;;;;;;;6FAAA,KAAgB;;;;wEAAA;;GACjB;EAED,AAAA,sBAEC;mCADQ;;;;;;;;;;;wGAAgB;GACxB;EAED,AAAA,wBAEC;mCADQ;;;;;;;;;;;wGAAkB;GAC1B;EAED,AAAA,2BAEC;mCADQ;;;;;;;;;;;wGAAqB;GAC7B;;;;;;;;;;;;;;;;IApCD;qCAAA;;;;;;;;;;;0GAA0C;KAAA;IAC1C;qCAAA;;;;;;;;;;;0GAAwC;KAAA;IACxC;qCAAA;;;;;;;;;;;0GAA+C;KAAA;;;;;;;;;;;;"
+}
